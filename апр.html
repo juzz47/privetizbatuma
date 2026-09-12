@@ -1,0 +1,1115 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title data-i18n-title="page_title">კაფე „პრივეტ იზ ბატუმა“ — მემედ აბაშიძის გამზირზე</title>
+<meta name="description" data-i18n-meta="page_description" content="კაფე „პრივეტ იზ ბატუმა“: საუზმე, პასტა, შნიცელები და დესერტები ზღვიდან ორ წუთში. 39 Memed Abashidze Ave, ბათუმი.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Golos+Text:wght@400;500;600;700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F1E3C4;
+    --paper-soft:#F7EEDA;
+    --paper-dark:#E3CE9C;
+    --ink:#2A2015;
+    --ink-soft:#5B4C38;
+    --sea:#1F5266;
+    --sea-deep:#123845;
+    --citrus:#E2792B;
+    --citrus-deep:#B85A18;
+    --stamp:#A33327;
+    --gold:#C79A3D;
+    --line:rgba(42,32,21,0.18);
+    --radius:2px;
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+    *{animation-duration:0.001ms !important; animation-iteration-count:1 !important; transition-duration:0.001ms !important;}
+  }
+
+  body{
+    margin:0;
+    background:var(--sea-deep);
+    color:var(--ink);
+    font-family:'Golos Text', sans-serif;
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  h1,h2,h3,h4{
+    font-family:'PT Serif', serif;
+    margin:0 0 0.4em;
+    color:var(--ink);
+    font-weight:700;
+  }
+
+  a{color:inherit;}
+  img{max-width:100%;display:block;}
+
+  .wrap{max-width:1080px;margin:0 auto;padding:0 24px;}
+
+  /* ---------- airmail stripe motif ---------- */
+  .airmail{
+    height:10px;
+    background:repeating-linear-gradient(
+      -45deg,
+      var(--stamp) 0 14px,
+      var(--paper-soft) 14px 24px,
+      var(--sea) 24px 38px,
+      var(--paper-soft) 38px 48px
+    );
+  }
+
+  /* ---------- header ---------- */
+  header{
+    position:sticky; top:0; z-index:40;
+    background:var(--paper-soft);
+    border-bottom:1px solid var(--line);
+  }
+  .header-inner{
+    display:flex; align-items:center; justify-content:space-between;
+    padding:14px 24px; max-width:1080px; margin:0 auto; gap:16px;
+  }
+  .brand{
+    display:flex; align-items:baseline; gap:10px;
+    font-family:'PT Serif', serif; font-style:italic; font-weight:700;
+    font-size:1.35rem; color:var(--stamp); text-decoration:none;
+    white-space:nowrap;
+  }
+  .brand small{
+    font-family:'Golos Text', sans-serif; font-style:normal; font-weight:500;
+    font-size:0.7rem; color:var(--ink-soft); letter-spacing:0.02em;
+  }
+  nav.primary{display:flex; gap:18px; font-size:0.9rem;}
+  nav.primary a{text-decoration:none; color:var(--ink-soft); border-bottom:1px solid transparent; padding-bottom:2px; white-space:nowrap;}
+  nav.primary a:hover, nav.primary a:focus-visible{color:var(--stamp); border-bottom-color:var(--stamp);}
+  .header-actions{display:flex; align-items:center; gap:14px;}
+  .phone-link{font-size:0.92rem; text-decoration:none; color:var(--ink); white-space:nowrap;}
+  @media (max-width:920px){
+    nav.primary{display:none;}
+  }
+  @media (max-width:560px){
+    .phone-link{display:none;}
+  }
+
+  /* ---------- language switcher ---------- */
+  .lang-switch{display:flex; gap:4px; border:1px solid var(--line); border-radius:20px; padding:3px; background:var(--paper);}
+  .lang-switch button{
+    border:none; background:transparent; color:var(--ink-soft);
+    font-family:'Golos Text', sans-serif; font-weight:600; font-size:0.75rem;
+    padding:5px 10px; border-radius:16px; cursor:pointer; letter-spacing:0.02em;
+    transition:background 0.15s ease, color 0.15s ease;
+  }
+  .lang-switch button.active{background:var(--stamp); color:var(--paper-soft);}
+  .lang-switch button:focus-visible{outline:2px solid var(--gold); outline-offset:1px;}
+
+  .btn{
+    display:inline-block;
+    font-family:'Golos Text', sans-serif;
+    font-weight:600;
+    font-size:0.95rem;
+    padding:11px 22px;
+    border-radius:var(--radius);
+    text-decoration:none;
+    border:1px solid var(--ink);
+    cursor:pointer;
+    transition:transform 0.15s ease, background 0.15s ease, color 0.15s ease;
+  }
+  .btn-solid{background:var(--stamp); color:var(--paper-soft); border-color:var(--stamp);}
+  .btn-solid:hover{background:var(--citrus-deep); border-color:var(--citrus-deep);}
+  .btn-outline{background:transparent; color:var(--ink); border-color:var(--ink);}
+  .btn-outline:hover{background:var(--ink); color:var(--paper-soft);}
+  .btn:focus-visible{outline:3px solid var(--gold); outline-offset:2px;}
+
+  /* ---------- hero ---------- */
+  .hero{
+    background:
+      radial-gradient(circle at 18% 20%, rgba(255,255,255,0.06), transparent 40%),
+      linear-gradient(180deg, var(--sea) 0%, var(--sea-deep) 100%);
+    padding:64px 24px 80px;
+    display:flex; justify-content:center;
+  }
+  .postcard{
+    position:relative;
+    background:var(--paper-soft);
+    max-width:640px;
+    width:100%;
+    padding:6px;
+    transform:rotate(-1.4deg);
+    box-shadow:0 22px 45px rgba(0,0,0,0.35), 0 2px 0 rgba(0,0,0,0.08);
+  }
+  .postcard-inner{
+    border:1px solid var(--line);
+    padding:44px 40px 38px;
+    text-align:center;
+    background:
+      repeating-linear-gradient(transparent 0 27px, rgba(42,32,21,0.05) 27px 28px);
+  }
+  .eyebrow-hand{
+    font-family:'Caveat', cursive;
+    font-size:1.15rem;
+    color:var(--sea);
+    display:inline-block;
+    transform:rotate(-2deg);
+    margin-bottom:6px;
+  }
+  .hero h1{
+    font-style:italic;
+    font-size:clamp(2.2rem, 5vw, 3.1rem);
+    line-height:1.05;
+    color:var(--stamp);
+  }
+  .hero .ka{
+    font-family:'Golos Text', sans-serif;
+    font-size:0.95rem;
+    color:var(--ink-soft);
+    margin-bottom:22px;
+  }
+  .hero-tags{
+    display:flex; gap:10px; justify-content:center; flex-wrap:wrap;
+    font-size:0.85rem; color:var(--ink-soft); margin-bottom:26px;
+  }
+  .hero-tags span{
+    border:1px solid var(--line); padding:4px 12px; border-radius:20px;
+  }
+  .hero-actions{display:flex; gap:12px; justify-content:center; flex-wrap:wrap;}
+
+  .postmark{
+    position:absolute; top:-22px; right:-18px;
+    width:118px; height:118px;
+    animation:stamp-in 0.6s cubic-bezier(.2,1.4,.4,1) both;
+    animation-delay:0.15s;
+  }
+  @keyframes stamp-in{
+    from{opacity:0; transform:scale(0.5) rotate(18deg);}
+    to{opacity:1; transform:scale(1) rotate(12deg);}
+  }
+  @media (max-width:560px){
+    .postmark{width:92px; height:92px; top:-16px; right:-12px;}
+    .postcard-inner{padding:36px 22px 30px;}
+  }
+
+  /* ---------- section shell ---------- */
+  section{background:var(--paper); padding:76px 0;}
+  section.alt{background:var(--paper-dark);}
+  .section-head{max-width:640px; margin:0 auto 44px; text-align:center;}
+  .section-head h2{font-size:clamp(1.7rem,3.4vw,2.3rem); font-style:italic;}
+  .section-head p{color:var(--ink-soft); margin:0;}
+
+  /* ---------- about ---------- */
+  .about-grid{
+    display:grid; grid-template-columns:1.15fr 0.85fr; gap:56px; align-items:center;
+  }
+  .about-grid p{color:var(--ink-soft); margin:0 0 14px;}
+  .about-grid p:last-child{margin-bottom:0;}
+  .about-grid .art{display:flex; justify-content:center;}
+  .about-board{
+    width:min(100%, 320px);
+    padding:28px 24px 24px;
+    background:var(--sea-deep);
+    color:var(--paper-soft);
+    box-shadow:12px 12px 0 var(--citrus);
+    transform:rotate(-2deg);
+  }
+  .board-kicker{font-size:0.7rem; letter-spacing:0.16em; color:var(--paper-dark);}
+  .board-big{font-family:'PT Serif',serif; font-size:3.5rem; line-height:0.95; margin:22px 0 18px; color:var(--paper-soft);}
+  .board-copy{font-family:'Caveat',cursive; font-size:1.45rem; line-height:1.15; color:var(--paper-dark);}
+  .board-line{border-top:1px solid rgba(247,238,218,0.35); margin:24px 0 16px;}
+  .board-footer{display:flex; justify-content:space-between; gap:12px; font-size:0.7rem; color:var(--paper-dark); letter-spacing:0.08em;}
+  .moment-list{display:grid; gap:12px; margin-top:26px;}
+  .moment{display:grid; grid-template-columns:90px 1fr; gap:14px; align-items:baseline; padding:12px 0; border-top:1px solid var(--line);}
+  .moment:last-child{border-bottom:1px solid var(--line);}
+  .moment-time{font-family:'Caveat',cursive; font-size:1.2rem; color:var(--stamp);}
+  .moment-copy{font-size:0.92rem; color:var(--ink-soft);}
+  .badge-row{display:flex; gap:10px; margin-top:22px; flex-wrap:wrap;}
+  .badge{
+    font-size:0.82rem; border:1px dashed var(--ink-soft); padding:6px 12px;
+    color:var(--ink-soft); border-radius:20px;
+  }
+  @media (max-width:780px){
+    .about-grid{grid-template-columns:1fr; gap:32px;}
+    .about-grid .art{order:-1; max-width:220px; margin:0 auto;}
+  }
+
+  /* ---------- showcase (day) ---------- */
+  .showcase-cols{display:grid; grid-template-columns:1fr 1fr; gap:44px;}
+  .showcase-group h3{font-size:1.2rem; font-style:italic; display:flex; align-items:center; gap:10px;}
+  .showcase-group h3 .dot{width:9px;height:9px;border-radius:50%; display:inline-block;}
+  .showcase-group.hit h3 .dot{background:var(--stamp);}
+  .showcase-group.new h3 .dot{background:var(--gold);}
+  .showcase-cards{display:grid; gap:14px; margin-top:18px;}
+  .showcase-card{
+    display:flex; gap:14px; align-items:center;
+    background:var(--paper-soft); border:1px solid var(--line); padding:10px;
+  }
+  .showcase-card img{width:78px; height:78px; object-fit:cover; border:1px solid var(--line); flex-shrink:0;}
+  .showcase-card .info{min-width:0;}
+  .showcase-card .info h4{margin:0 0 3px; font-size:0.98rem; font-style:italic;}
+  .showcase-card .info p{margin:0 0 4px; font-size:0.82rem; color:var(--ink-soft); line-height:1.35;}
+  .showcase-card .price{font-family:'PT Serif',serif; font-style:italic; color:var(--sea); font-size:0.92rem;}
+  @media (max-width:780px){.showcase-cols{grid-template-columns:1fr; gap:34px;}}
+
+  /* ---------- menu ---------- */
+  .menu-tabs{
+    display:flex; flex-wrap:wrap; gap:8px; justify-content:center; margin-bottom:38px;
+  }
+  .menu-tabs button{
+    border:1px solid var(--line); background:var(--paper-soft); color:var(--ink-soft);
+    font-family:'Golos Text', sans-serif; font-size:0.84rem; padding:7px 16px;
+    border-radius:20px; cursor:pointer; transition:background 0.15s ease, color 0.15s ease;
+  }
+  .menu-tabs button.active{background:var(--ink); color:var(--paper-soft); border-color:var(--ink);}
+  .menu-tabs button:focus-visible{outline:2px solid var(--gold); outline-offset:1px;}
+
+  .menu-grid{
+    display:grid; grid-template-columns:repeat(4,1fr); gap:22px;
+  }
+  .dish{
+    background:var(--paper-soft);
+    border:1px solid var(--line);
+    padding:16px 16px 18px;
+    text-align:left;
+    position:relative;
+    transition:transform 0.18s ease;
+  }
+  .dish-link{display:block; color:inherit; text-decoration:none;}
+  .dish:nth-child(odd){transform:rotate(-0.5deg);}
+  .dish:nth-child(even){transform:rotate(0.5deg);}
+  .dish:hover{transform:translateY(-4px) rotate(0deg);}
+  .dish .dish-img{width:100%; aspect-ratio:4/3; object-fit:cover; border:1px solid var(--line); margin-bottom:12px; filter:saturate(0.94) contrast(1.02);}
+  .dish h3{font-size:1rem; font-style:italic; margin-bottom:4px;}
+  .dish p{font-size:0.83rem; color:var(--ink-soft); margin:0 0 8px;}
+  .dish .price{font-family:'PT Serif', serif; font-style:italic; color:var(--sea); font-size:0.95rem;}
+  .dish .tag{
+    position:absolute; top:8px; left:8px;
+    background:var(--citrus); color:#fff; font-size:0.65rem; font-weight:600;
+    padding:2px 9px; border-radius:10px; letter-spacing:0.02em; z-index:2;
+  }
+  .dish .tag.new{background:var(--gold);}
+  @media (max-width:900px){.menu-grid{grid-template-columns:repeat(2,1fr);}}
+  @media (max-width:520px){.menu-grid{grid-template-columns:1fr 1fr; gap:14px;}}
+
+  .menu-note{
+    text-align:center; margin-top:40px; color:var(--ink-soft); font-size:0.95rem;
+  }
+  .menu-note a{color:var(--stamp); font-weight:600; text-decoration:underline;}
+
+  /* ---------- visit / hours ---------- */
+  .visit-grid{
+    display:grid; grid-template-columns:repeat(3,1fr); gap:0;
+    border:1px solid var(--line); background:var(--paper-soft);
+  }
+  .visit-card{padding:32px 26px; border-right:1px dashed var(--line);}
+  .visit-card:last-child{border-right:none;}
+  .visit-card h3{font-size:1.05rem; font-style:italic; margin-bottom:10px;}
+  .visit-card p{color:var(--ink-soft); font-size:0.92rem; margin:0;}
+  .visit-card .big{
+    font-family:'PT Serif', serif; font-style:italic; font-size:1.5rem; color:var(--sea);
+    display:block; margin-bottom:6px;
+  }
+  @media (max-width:780px){
+    .visit-grid{grid-template-columns:1fr;}
+    .visit-card{border-right:none; border-bottom:1px dashed var(--line);}
+    .visit-card:last-child{border-bottom:none;}
+  }
+
+  /* ---------- reviews ---------- */
+  .clothesline{
+    position:relative;
+    border-top:2px dashed var(--ink-soft);
+    margin-top:10px;
+    padding-top:34px;
+    display:grid; grid-template-columns:repeat(3,1fr); gap:30px;
+  }
+  .note{
+    background:var(--paper-soft);
+    border:1px solid var(--line);
+    padding:24px 20px 18px;
+    position:relative;
+    box-shadow:0 8px 18px rgba(0,0,0,0.08);
+  }
+  .note:nth-child(1){transform:rotate(-1.2deg);}
+  .note:nth-child(2){transform:rotate(0.8deg);}
+  .note:nth-child(3){transform:rotate(-0.4deg);}
+  .peg{
+    position:absolute; top:-14px; left:50%; transform:translateX(-50%);
+    width:18px; height:22px; background:var(--gold); border-radius:3px;
+  }
+  .note p{
+    font-family:'Caveat', cursive; font-size:1.28rem; color:var(--ink);
+    margin:0 0 12px; line-height:1.35;
+  }
+  .note .who{font-size:0.82rem; color:var(--ink-soft); font-family:'Golos Text',sans-serif;}
+  .rating-line{
+    display:flex; align-items:center; justify-content:center; gap:10px;
+    margin-top:40px; color:var(--ink-soft); font-size:0.92rem;
+  }
+  .stars{color:var(--gold); letter-spacing:2px;}
+  @media (max-width:780px){.clothesline{grid-template-columns:1fr;}}
+
+  /* ---------- location ---------- */
+  .loc-grid{display:grid; grid-template-columns:1fr 1fr; gap:48px; align-items:start;}
+  .loc-list{list-style:none; margin:0; padding:0;}
+  .loc-list li{
+    display:flex; gap:14px; padding:14px 0; border-bottom:1px solid var(--line);
+  }
+  .loc-list li:last-child{border-bottom:none;}
+  .loc-list svg{width:22px; height:22px; flex-shrink:0; margin-top:2px; color:var(--sea);}
+  .loc-list strong{display:block; font-size:0.95rem;}
+  .loc-list span{color:var(--ink-soft); font-size:0.9rem;}
+  .map-frame{
+    border:1px solid var(--ink); background:var(--sea-deep); aspect-ratio:4/3;
+    display:flex; align-items:center; justify-content:center; position:relative; overflow:hidden;
+  }
+  .map-frame iframe{width:100%; height:100%; border:0; filter:saturate(0.85) contrast(1.05);}
+  @media (max-width:780px){.loc-grid{grid-template-columns:1fr;}}
+
+  /* ---------- footer ---------- */
+  footer{
+    background:var(--sea-deep); color:var(--paper-soft);
+    padding:40px 0 30px; font-size:0.86rem;
+  }
+  .footer-inner{
+    display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:14px;
+  }
+  footer a{color:var(--paper-soft); text-decoration:underline;}
+  .footer-brand{font-family:'PT Serif', serif; font-style:italic; font-size:1.1rem;}
+</style>
+</head>
+<body>
+
+<div class="airmail" role="presentation"></div>
+
+<header>
+  <div class="header-inner">
+    <a class="brand" href="#top"><span data-i18n="brand_main">პრივეტ</span> <small data-i18n="brand_sub">იზ ბატუმა</small></a>
+    <nav class="primary" aria-label="საიტის განყოფილებები">
+      <a href="#about" data-i18n="nav_about">ჩვენს შესახებ</a>
+      <a href="#showcase" data-i18n="nav_showcase">დღის ვიტრინა</a>
+      <a href="#menu" data-i18n="nav_menu">მენიუ</a>
+      <a href="#visit" data-i18n="nav_visit">საათები და მისამართი</a>
+      <a href="#reviews" data-i18n="nav_reviews">გამოხმაურებები</a>
+      <a href="#contacts" data-i18n="nav_contacts">კონტაქტები</a>
+    </nav>
+    <div class="header-actions">
+      <div class="lang-switch" role="group" aria-label="ენის არჩევა">
+        <button type="button" data-lang="ka">KA</button>
+        <button type="button" data-lang="ru">RU</button>
+        <button type="button" data-lang="en">EN</button>
+      </div>
+      <a class="phone-link" href="tel:+995422277766">+995 422 27 77 66</a>
+      <a class="btn btn-solid" href="https://www.google.com/maps/dir/?api=1&destination=39+Memed+Abashidze+Ave,+Batumi" target="_blank" rel="noopener" data-i18n="btn_route">მარშრუტის აგება</a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+  <div class="hero">
+    <div class="postcard">
+      <svg class="postmark" viewBox="0 0 120 120" aria-hidden="true">
+        <circle cx="60" cy="60" r="56" fill="none" stroke="#A33327" stroke-width="2"/>
+        <circle cx="60" cy="60" r="47" fill="none" stroke="#A33327" stroke-width="1.5" stroke-dasharray="3 4"/>
+        <text x="60" y="46" text-anchor="middle" font-family="PT Serif, serif" font-style="italic" font-weight="700" font-size="22" fill="#A33327">4,2</text>
+        <text x="60" y="62" text-anchor="middle" font-family="Golos Text, sans-serif" font-size="8" fill="#A33327" letter-spacing="1">★ ★ ★ ★ ☆</text>
+        <text x="60" y="76" text-anchor="middle" font-family="Golos Text, sans-serif" font-size="7.5" fill="#A33327">1336 REVIEWS</text>
+        <text x="60" y="97" text-anchor="middle" font-family="Golos Text, sans-serif" font-size="7" fill="#A33327">BATUMI · GEORGIA</text>
+      </svg>
+      <div class="postcard-inner">
+        <span class="eyebrow-hand" data-i18n="hero_eyebrow">კაფე მემედ აბაშიძის გამზირზე</span>
+        <h1 data-i18n="hero_h1">პრივეტ იზ ბატუმა</h1>
+        <p class="ka" data-i18n="hero_altname">Приветъ из Батума</p>
+        <div class="hero-tags">
+          <span data-i18n="hero_tag1">საუზმე და სადილი</span>
+          <span data-i18n="hero_tag2">10–50 ₾ ერთ სტუმარზე</span>
+          <span data-i18n="hero_tag3">დარბაზი და გატანა</span>
+        </div>
+        <div class="hero-actions">
+          <a class="btn btn-solid" href="tel:+995422277766" data-i18n="btn_call_book">დარეკვა და დაჯავშნა</a>
+          <a class="btn btn-outline" href="#menu" data-i18n="btn_view_menu">მენიუს ნახვა</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section id="about">
+    <div class="wrap about-grid">
+      <div>
+        <h2 data-i18n="about_h2">ერთი კაფე, სამი კარგი მიზეზი შემოსასვლელად</h2>
+        <p data-i18n="about_p1">„პრივეტ იზ ბატუმა“ არის ადგილი, სადაც არ არის საჭირო განსაკუთრებული შემთხვევა. უბრალოდ აირჩიეთ დღის რიტმი და დაჯექით მაგიდასთან.</p>
+        <div class="moment-list">
+          <div class="moment"><span class="moment-time" data-i18n="about_moment1_time">დილით</span><span class="moment-copy" data-i18n="about_moment1_copy">ყავა, მშვიდი საუზმე და ქალაქის ნელა დაწყება.</span></div>
+          <div class="moment"><span class="moment-time" data-i18n="about_moment2_time">შუადღეს</span><span class="moment-copy" data-i18n="about_moment2_copy">სწრაფი სამუშაო სადილი, პასტა ან ხრაშუნა შნიცელი.</span></div>
+          <div class="moment"><span class="moment-time" data-i18n="about_moment3_time">საღამოს</span><span class="moment-copy" data-i18n="about_moment3_copy">ღვინის ჭიქა, დესერტი და საუბარი, რომელიც არ ჩქარობს.</span></div>
+        </div>
+      </div>
+      <div class="art" aria-hidden="true">
+        <div class="about-board">
+          <div class="board-kicker" data-i18n="about_board_kicker">NO OCCASION NEEDED</div>
+          <div class="board-big" data-i18n="about_board_big">უბრალოდ<br>შემოდი.</div>
+          <div class="board-copy" data-i18n="about_board_copy">კარგი საჭმელი დღესასწაულს არ უნდა ელოდებოდეს</div>
+          <div class="board-line"></div>
+          <div class="board-footer"><span>BATUMI</span><span>DAILY</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="showcase" class="alt">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 data-i18n="showcase_h2">დღის ვიტრინა</h2>
+        <p data-i18n="showcase_sub">გაყიდვების ლიდერები და სეზონის სიახლეები — რაც დღეს ღირს გასინჯვა.</p>
+      </div>
+      <div class="showcase-cols">
+        <div class="showcase-group hit">
+          <h3><span class="dot" aria-hidden="true"></span><span data-i18n="showcase_hit_h3">გაყიდვების ლიდერები</span></h3>
+          <div class="showcase-cards" id="showcase-hits"></div>
+        </div>
+        <div class="showcase-group new">
+          <h3><span class="dot" aria-hidden="true"></span><span data-i18n="showcase_new_h3">სიახლეები</span></h3>
+          <div class="showcase-cards" id="showcase-new"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="menu">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 data-i18n="menu_h2">მენიუ</h2>
+        <p data-i18n="menu_sub">კერძების სრული სია და აქტუალური ფასები — Facebook-სა და Glovo-ზე. აქ — არჩევანი განყოფილებების მიხედვით.</p>
+      </div>
+      <div class="menu-tabs" id="menu-tabs"></div>
+      <div class="menu-grid" id="menu-grid"></div>
+      <p class="menu-note" data-i18n="menu_note">საიდუმლო მუდმივი სტუმრებისგან — ისპანახის ტორტი: ჰკითხეთ ვიტრინასთან, სწრაფად იშლება.<br>კერძების სრული სია, ფასები და მიტანა — <a href="https://www.facebook.com/privetizbatuma/menu" target="_blank" rel="noopener">Facebook-ზე</a> და <a href="https://glovoapp.com/ka/ge/batumi/stores/privet-iz-batuma-bat" target="_blank" rel="noopener">Glovo-ზე</a>.</p>
+    </div>
+  </section>
+
+  <section id="visit" class="alt">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 data-i18n="visit_h2">როდის ჩამოხვიდეთ</h2>
+        <p data-i18n="visit_sub">ვმუშაობთ ყოველდღე, სამზარეულო იხურება შუაღამისას.</p>
+      </div>
+      <div class="visit-grid">
+        <div class="visit-card">
+          <span class="big">10:00 — 00:00</span>
+          <h3 data-i18n="visit_card1_h3">სამუშაო საათები</h3>
+          <p data-i18n="visit_card1_p">ღიაა ყოველდღე. გრაფიკი შეამოწმეთ ვიზიტამდე Facebook-გვერდზე — ზოგჯერ სეზონურად იცვლება.</p>
+        </div>
+        <div class="visit-card">
+          <span class="big" data-i18n="visit_card2_big">საღამო</span>
+          <h3 data-i18n="visit_card2_h3">ყველაზე დატვირთული დრო</h3>
+          <p data-i18n="visit_card2_p">შაბათ-კვირას საღამოს ხშირად ხალხმრავალია. თუ გინდათ მაგიდა ლოდინის გარეშე — ჩამოდით დილით ან დარეკეთ წინასწარ.</p>
+        </div>
+        <div class="visit-card">
+          <span class="big" data-i18n="visit_card3_big">დარბაზი + გატანა</span>
+          <h3 data-i18n="visit_card3_h3">ფორმატი</h3>
+          <p data-i18n="visit_card3_p">შეგიძლიათ დარჩეთ დარბაზში ან ვერანდაზე, ან წაიღოთ შეკვეთა თან.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="reviews">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 data-i18n="reviews_h2">რას წერენ სტუმრები</h2>
+        <p data-i18n="reviews_sub">რამდენიმე სტრიქონი ნამდვილი გამოხმაურებებიდან — გადმოცემული საკუთარი სიტყვებით.</p>
+      </div>
+      <div class="clothesline">
+        <div class="note">
+          <span class="peg" aria-hidden="true"></span>
+          <p data-i18n="review1_text">„ავიღე სალათი რუკოლათი და მსუბუქი შამპანური, დესერტად — ლიმონის ჩიზქეიქი. ყველაფერი ახალი და შინაურულად გემრიელი იყო.“</p>
+          <span class="who"><span data-i18n="review1_who_prefix">—</span> Nuria, <span data-i18n="review1_when">2 თვის წინ</span></span>
+        </div>
+        <div class="note">
+          <span class="peg" aria-hidden="true"></span>
+          <p data-i18n="review2_text">„ადგილი, სადაც სიამოვნებით ბრუნდები. საკვები არომატულია, მიწოდება მოწესრიგებული — ჩანს, ყველაფერი წვრილმანებამდეა გააზრებული.“</p>
+          <span class="who">— Kamilla, <span data-i18n="review_local_guide">ადგილობრივი ექსპერტი</span></span>
+        </div>
+        <div class="note">
+          <span class="peg" aria-hidden="true"></span>
+          <p data-i18n="review3_text">„ჩვენი საყვარელი კაფე ქალაქში უკვე მრავალი წელია — შემოვდივართ სადილად თუ ვახშმად ყოველთვის, როცა ბათუმში ვართ.“</p>
+          <span class="who">— <span data-i18n="review3_who">სტუმარი</span>, <span data-i18n="review_local_guide">ადგილობრივი ექსპერტი</span></span>
+        </div>
+      </div>
+      <div class="rating-line">
+        <span class="stars">★★★★☆</span>
+        <span data-i18n="rating_line">4,2 5-დან · 1336 გამოხმაურება რუკებზე</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="contacts" class="alt">
+    <div class="wrap loc-grid">
+      <div>
+        <h2 data-i18n="contacts_h2">როგორ გვიპოვოთ</h2>
+        <ul class="loc-list">
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s7-7.2 7-12a7 7 0 1 0-14 0c0 4.8 7 12 7 12z"/><circle cx="12" cy="9" r="2.4"/></svg>
+            <div><strong>39 Memed Abashidze Ave, Batumi 6000</strong><span data-i18n="loc_pluscode">Plus კოდი: JJXM+XW ბათუმი</span></div>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 5c0 8.3 6.7 15 15 15l3-4-6-3-2 2c-2.5-1.2-4.8-3.5-6-6l2-2-3-6z"/></svg>
+            <div><strong><a href="tel:+995422277766">+995 422 27 77 66</a></strong><span data-i18n="loc_phone_sub">ზარები და მაგიდის დაჯავშნა</span></div>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M14 8h2a2 2 0 0 1 2 2v2h-3v8h-3v-8h-2v-3h2V9a3 3 0 0 1 3-3z"/></svg>
+            <div><strong><a href="https://www.facebook.com/privetizbatuma" target="_blank" rel="noopener" data-i18n="loc_fb">კაფეს Facebook</a></strong><span data-i18n="loc_fb_sub">მენიუ, სიახლეები, ფოტოები</span></div>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="6" width="18" height="13" rx="2"/><path d="M3 8l9 6 9-6"/></svg>
+            <div><strong><a href="https://glovoapp.com/ka/ge/batumi/stores/privet-iz-batuma-bat" target="_blank" rel="noopener" data-i18n="loc_glovo">Glovo — მიტანა</a></strong><span data-i18n="loc_glovo_sub">შეუკვეთეთ ონლაინ სახლში მიტანით</span></div>
+          </li>
+        </ul>
+        <div style="margin-top:26px; display:flex; gap:12px; flex-wrap:wrap;">
+          <a class="btn btn-solid" href="https://www.google.com/maps/dir/?api=1&destination=39+Memed+Abashidze+Ave,+Batumi" target="_blank" rel="noopener" data-i18n="btn_route">მარშრუტის აგება</a>
+          <a class="btn btn-outline" href="tel:+995422277766" data-i18n="btn_call">დარეკვა</a>
+        </div>
+      </div>
+      <div class="map-frame">
+        <iframe
+          src="https://www.google.com/maps?q=39+Memed+Abashidze+Ave,+Batumi&output=embed"
+          title="Privet iz Batuma — карта расположения"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<div class="airmail" role="presentation"></div>
+
+<footer>
+  <div class="wrap footer-inner">
+    <span class="footer-brand" data-i18n="footer_brand">პრივეტ იზ ბატუმა</span>
+    <span>39 Memed Abashidze Ave, Batumi 6000 · <a href="tel:+995422277766">+995 422 27 77 66</a></span>
+    <span>© <span id="year"></span></span>
+  </div>
+</footer>
+
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+
+/* ================= i18n dictionary ================= */
+const I18N = {
+  ka: {
+    page_title: `კაფე „პრივეტ იზ ბატუმა“ — მემედ აბაშიძის გამზირზე`,
+    page_description: `კაფე „პრივეტ იზ ბატუმა“: საუზმე, პასტა, შნიცელები და დესერტები ზღვიდან ორ წუთში. 39 Memed Abashidze Ave, ბათუმი.`,
+    brand_main: `პრივეტ`,
+    brand_sub: `იზ ბატუმა`,
+    nav_about: `ჩვენს შესახებ`,
+    nav_showcase: `დღის ვიტრინა`,
+    nav_menu: `მენიუ`,
+    nav_visit: `საათები და მისამართი`,
+    nav_reviews: `გამოხმაურებები`,
+    nav_contacts: `კონტაქტები`,
+    btn_route: `მარშრუტის აგება`,
+    btn_call_book: `დარეკვა და დაჯავშნა`,
+    btn_view_menu: `მენიუს ნახვა`,
+    btn_call: `დარეკვა`,
+    hero_eyebrow: `კაფე მემედ აბაშიძის გამზირზე`,
+    hero_h1: `პრივეტ იზ ბატუმა`,
+    hero_altname: `Приветъ из Батума`,
+    hero_tag1: `საუზმე და სადილი`,
+    hero_tag2: `10–50 ₾ ერთ სტუმარზე`,
+    hero_tag3: `დარბაზი და გატანა`,
+    about_h2: `ერთი კაფე, სამი კარგი მიზეზი შემოსასვლელად`,
+    about_p1: `„პრივეტ იზ ბატუმა“ არის ადგილი, სადაც არ არის საჭირო განსაკუთრებული შემთხვევა. უბრალოდ აირჩიეთ დღის რიტმი და დაჯექით მაგიდასთან.`,
+    about_moment1_time: `დილით`,
+    about_moment1_copy: `ყავა, მშვიდი საუზმე და ქალაქის ნელა დაწყება.`,
+    about_moment2_time: `შუადღეს`,
+    about_moment2_copy: `სწრაფი სამუშაო სადილი, პასტა ან ხრაშუნა შნიცელი.`,
+    about_moment3_time: `საღამოს`,
+    about_moment3_copy: `ღვინის ჭიქა, დესერტი და საუბარი, რომელიც არ ჩქარობს.`,
+    about_board_kicker: `NO OCCASION NEEDED`,
+    about_board_big: `უბრალოდ<br>შემოდი.`,
+    about_board_copy: `კარგი საჭმელი დღესასწაულს არ უნდა ელოდებოდეს`,
+    about_p2: `მენიუში დაგხვდებათ პასტა, შნიცელები, სალათები, სენდვიჩები და ადგილზე მომზადებული დესერტები. ეს არის მყუდრო, ყოველდღიური კაფე მეგობრული მომსახურებითა და მშვიდი ატმოსფეროთი.`,
+    about_badge1: `მართავს ქალი-მეწარმე`,
+    about_badge2: `რეიტინგი 4,2 · 1336 გამოხმაურება`,
+    about_badge3: `Wi-Fi და ვერანდა`,
+    showcase_h2: `დღის ვიტრინა`,
+    showcase_sub: `გაყიდვების ლიდერები და სეზონის სიახლეები — რაც დღეს ღირს გასინჯვა.`,
+    showcase_hit_h3: `გაყიდვების ლიდერები`,
+    showcase_new_h3: `სიახლეები`,
+    badge_hit: `ლიდერი`,
+    badge_new: `სიახლე`,
+    menu_h2: `მენიუ`,
+    menu_sub: `კერძების სრული სია და აქტუალური ფასები — Facebook-სა და Glovo-ზე. აქ — არჩევანი განყოფილებების მიხედვით.`,
+    menu_note: `კერძების სრული სია, ფასები და მიტანა ხელმისაწვდომია <a href="https://www.facebook.com/privetizbatuma/menu" target="_blank" rel="noopener">Facebook-ზე</a> და <a href="https://glovoapp.com/ka/ge/batumi/stores/privet-iz-batuma-bat" target="_blank" rel="noopener">Glovo-ზე</a>.`,
+    cat_all: `ყველა`,
+    cat_hot: `ცხელი კერძები`,
+    cat_salads: `სალათები`,
+    cat_pizza: `პიცა და ხაჭაპური`,
+    cat_pasta: `პასტა`,
+    cat_sides: `გარნირები`,
+    cat_sandwiches: `სენდვიჩები და ტოსტები`,
+    cat_soups: `წვნიანები`,
+    cat_desserts: `დესერტები`,
+    cat_drinks: `სასმელები და შეიკები`,
+    visit_h2: `როდის ჩამოხვიდეთ`,
+    visit_sub: `ვმუშაობთ ყოველდღე, სამზარეულო იხურება შუაღამისას.`,
+    visit_card1_h3: `სამუშაო საათები`,
+    visit_card1_p: `ღიაა ყოველდღე. გრაფიკი შეამოწმეთ ვიზიტამდე Facebook-გვერდზე — ზოგჯერ სეზონურად იცვლება.`,
+    visit_card2_big: `საღამო`,
+    visit_card2_h3: `ყველაზე დატვირთული დრო`,
+    visit_card2_p: `შაბათ-კვირას საღამოს ხშირად ხალხმრავალია. თუ გინდათ მაგიდა ლოდინის გარეშე — ჩამოდით დილით ან დარეკეთ წინასწარ.`,
+    visit_card3_big: `დარბაზი + გატანა`,
+    visit_card3_h3: `ფორმატი`,
+    visit_card3_p: `შეგიძლიათ დარჩეთ დარბაზში ან ვერანდაზე, ან წაიღოთ შეკვეთა თან — შეფუთვა საიმედოა.`,
+    reviews_h2: `რას წერენ სტუმრები`,
+    reviews_sub: `რამდენიმე სტრიქონი ნამდვილი გამოხმაურებებიდან — გადმოცემული საკუთარი სიტყვებით.`,
+    review1_text: `„ავიღე სალათი რუკოლათი და მსუბუქი შამპანური, დესერტად — ლიმონის ჩიზქეიქი. ყველაფერი ახალი და შინაურულად გემრიელი იყო.“`,
+    review1_who_prefix: `—`,
+    review1_when: `2 თვის წინ`,
+    review2_text: `„ადგილი, სადაც სიამოვნებით ბრუნდები. საკვები არომატულია, მიწოდება მოწესრიგებული — ჩანს, ყველაფერი წვრილმანებამდეა გააზრებული.“`,
+    review3_text: `„ჩვენი საყვარელი კაფე ქალაქში უკვე მრავალი წელია — შემოვდივართ სადილად თუ ვახშმად ყოველთვის, როცა ბათუმში ვართ.“`,
+    review3_who: `სტუმარი`,
+    review_local_guide: `ადგილობრივი ექსპერტი`,
+    rating_line: `4,2 5-დან · 1336 გამოხმაურება რუკებზე`,
+    contacts_h2: `როგორ გვიპოვოთ`,
+    loc_pluscode: `Plus კოდი: JJXM+XW ბათუმი`,
+    loc_phone_sub: `ზარები და მაგიდის დაჯავშნა`,
+    loc_fb: `კაფეს Facebook`,
+    loc_fb_sub: `მენიუ, სიახლეები, ფოტოები`,
+    loc_glovo: `Glovo — მიტანა`,
+    loc_glovo_sub: `შეუკვეთეთ ონლაინ სახლში მიტანით`,
+    footer_brand: `პრივეტ იზ ბატუმა`
+  },
+  ru: {
+    page_title: `Кафе «Приветъ из Батума» — на проспекте Абашидзе`,
+    page_description: `Кафе «Приветъ из Батума»: завтраки, паста, шницели и десерты в двух минутах от моря. 39 Memed Abashidze Ave, Батуми.`,
+    brand_main: `Приветъ`,
+    brand_sub: `из Батума`,
+    nav_about: `О кафе`,
+    nav_showcase: `Витрина дня`,
+    nav_menu: `Меню`,
+    nav_visit: `Часы и адрес`,
+    nav_reviews: `Отзывы`,
+    nav_contacts: `Контакты`,
+    btn_route: `Проложить маршрут`,
+    btn_call_book: `Позвонить и забронировать`,
+    btn_view_menu: `Смотреть меню`,
+    btn_call: `Позвонить`,
+    hero_eyebrow: `Кафе на проспекте Абашидзе`,
+    hero_h1: `Приветъ из Батума`,
+    hero_altname: `კაფე პრივეტ იზ ბატუმა`,
+    hero_tag1: `Завтраки и обеды`,
+    hero_tag2: `10–50 ₾ на человека`,
+    hero_tag3: `Зал и навынос`,
+    about_h2: `Одно кафе, три хороших повода зайти`,
+    about_p1: `В «Приветъ из Батума» не нужен особый случай. Просто выберите свой ритм дня и садитесь за стол.`,
+    about_moment1_time: `Утром`,
+    about_moment1_copy: `Кофе, спокойный завтрак и мягкое начало дня.`,
+    about_moment2_time: `Днём`,
+    about_moment2_copy: `Рабочий обед, паста или хрустящий шницель без долгого ожидания.`,
+    about_moment3_time: `Вечером`,
+    about_moment3_copy: `Бокал вина, десерт и разговор, которому некуда спешить.`,
+    about_board_kicker: `ПОВОД НЕ НУЖЕН`,
+    about_board_big: `Просто<br>заходи.`,
+    about_board_copy: `хорошая еда не должна ждать праздника`,
+    about_p2: `В меню — паста, шницели, салаты, сэндвичи и десерты, которые готовят на месте. Это уютное кафе на каждый день: с внимательным обслуживанием, спокойной атмосферой и понятной домашней кухней.`,
+    about_badge1: `Управляет женщина-предприниматель`,
+    about_badge2: `Рейтинг 4,2 · 1336 отзывов`,
+    about_badge3: `Wi-Fi и веранда`,
+    showcase_h2: `Витрина дня`,
+    showcase_sub: `Хиты продаж и новинки сезона — то, что стоит попробовать сегодня.`,
+    showcase_hit_h3: `Хиты продаж`,
+    showcase_new_h3: `Новинки`,
+    badge_hit: `Хит`,
+    badge_new: `Новинка`,
+    menu_h2: `Меню`,
+    menu_sub: `Полный список блюд и актуальные цены — на страницах Facebook и Glovo. Здесь — подборка по разделам меню.`,
+    menu_note: `Полное меню, цены и доставка доступны <a href="https://www.facebook.com/privetizbatuma/menu" target="_blank" rel="noopener">в Facebook</a> и <a href="https://glovoapp.com/ka/ge/batumi/stores/privet-iz-batuma-bat" target="_blank" rel="noopener">на Glovo</a>.`,
+    cat_all: `Все`,
+    cat_hot: `Горячие блюда`,
+    cat_salads: `Салаты`,
+    cat_pizza: `Пицца и хачапури`,
+    cat_pasta: `Паста`,
+    cat_sides: `Гарниры`,
+    cat_sandwiches: `Сэндвичи и тосты`,
+    cat_soups: `Супы`,
+    cat_desserts: `Десерты`,
+    cat_drinks: `Напитки и шейки`,
+    visit_h2: `Когда заходить`,
+    visit_sub: `Работаем каждый день, кухня закрывается около полуночи.`,
+    visit_card1_h3: `Часы работы`,
+    visit_card1_p: `Открыто ежедневно. Расписание уточняйте перед визитом на странице Facebook — иногда меняется по сезону.`,
+    visit_card2_big: `Вечер`,
+    visit_card2_h3: `Самое людное время`,
+    visit_card2_p: `По выходным вечером бывает многолюдно. Если хотите столик без ожидания — приходите утром или звоните заранее.`,
+    visit_card3_big: `Зал + навынос`,
+    visit_card3_h3: `Формат`,
+    visit_card3_p: `Можно остаться в зале или на веранде, а можно забрать заказ с собой — упаковка надёжная.`,
+    reviews_h2: `Что пишут гости`,
+    reviews_sub: `Несколько строк из настоящих отзывов на картах — пересказано своими словами.`,
+    review1_text: `«Брала салат с рукколой и лёгкое шампанское, на десерт — лимонный чизкейк. Всё свежее и по-домашнему вкусное».`,
+    review1_who_prefix: `—`,
+    review1_when: `2 месяца назад`,
+    review2_text: `«Место, куда хочется возвращаться. Еда ароматная, подача аккуратная — видно, что всё продумано до мелочей».`,
+    review3_text: `«Наше любимое кафе в городе уже много лет — заходим сюда на обед или ужин каждый раз, когда бываем в Батуми».`,
+    review3_who: `гость`,
+    review_local_guide: `местный эксперт`,
+    rating_line: `4,2 из 5 · 1336 отзывов на картах`,
+    contacts_h2: `Как нас найти`,
+    loc_pluscode: `Код Plus: JJXM+XW Батуми`,
+    loc_phone_sub: `Звонки и бронь столика`,
+    loc_fb: `Facebook кафе`,
+    loc_fb_sub: `Меню, новости, фото`,
+    loc_glovo: `Glovo — доставка`,
+    loc_glovo_sub: `Закажите онлайн с доставкой на дом`,
+    footer_brand: `Приветъ из Батума`
+  },
+  en: {
+    page_title: `Privet iz Batuma Café — on Abashidze Avenue`,
+    page_description: `Privet iz Batuma café: breakfasts, pasta, schnitzels and desserts two minutes from the sea. 39 Memed Abashidze Ave, Batumi.`,
+    brand_main: `Privet`,
+    brand_sub: `iz Batuma`,
+    nav_about: `About`,
+    nav_showcase: `Today's picks`,
+    nav_menu: `Menu`,
+    nav_visit: `Hours & location`,
+    nav_reviews: `Reviews`,
+    nav_contacts: `Contacts`,
+    btn_route: `Get directions`,
+    btn_call_book: `Call to book a table`,
+    btn_view_menu: `View menu`,
+    btn_call: `Call us`,
+    hero_eyebrow: `A café on Abashidze Avenue`,
+    hero_h1: `Privet iz Batuma`,
+    hero_altname: `Приветъ из Батума`,
+    hero_tag1: `Breakfast & lunch`,
+    hero_tag2: `10–50 ₾ per guest`,
+    hero_tag3: `Dine-in & takeaway`,
+    about_h2: `One café, three good reasons to drop in`,
+    about_p1: `At Privet iz Batuma, you do not need a special occasion. Just choose your pace for the day and take a seat.`,
+    about_moment1_time: `Morning`,
+    about_moment1_copy: `Coffee, a calm breakfast and an easy start to the day.`,
+    about_moment2_time: `Midday`,
+    about_moment2_copy: `A working lunch, pasta or a crisp schnitzel without the wait.`,
+    about_moment3_time: `Evening`,
+    about_moment3_copy: `A glass of wine, dessert and a conversation with nowhere to rush.`,
+    about_board_kicker: `NO OCCASION NEEDED`,
+    about_board_big: `Just<br>drop in.`,
+    about_board_copy: `good food should not have to wait for a celebration`,
+    about_p2: `The menu includes pasta, schnitzels, salads, sandwiches and desserts prepared on site. It is a comfortable everyday café with attentive service, a calm atmosphere and straightforward home-style cooking.`,
+    about_badge1: `Woman-owned & run`,
+    about_badge2: `Rating 4.2 · 1,336 reviews`,
+    about_badge3: `Wi-Fi & veranda`,
+    showcase_h2: `Today's showcase`,
+    showcase_sub: `Bestsellers and seasonal newcomers — worth trying today.`,
+    showcase_hit_h3: `Bestsellers`,
+    showcase_new_h3: `New arrivals`,
+    badge_hit: `Bestseller`,
+    badge_new: `New`,
+    menu_h2: `Menu`,
+    menu_sub: `The full menu and current prices are on our Facebook and Glovo pages. Here is a selection by category.`,
+    menu_note: `The full menu, prices and delivery are available on <a href="https://www.facebook.com/privetizbatuma/menu" target="_blank" rel="noopener">Facebook</a> and <a href="https://glovoapp.com/ka/ge/batumi/stores/privet-iz-batuma-bat" target="_blank" rel="noopener">Glovo</a>.`,
+    cat_all: `All`,
+    cat_hot: `Hot dishes`,
+    cat_salads: `Salads`,
+    cat_pizza: `Pizza & Khachapuri`,
+    cat_pasta: `Pasta`,
+    cat_sides: `Sides`,
+    cat_sandwiches: `Sandwiches & toasts`,
+    cat_soups: `Soups`,
+    cat_desserts: `Desserts`,
+    cat_drinks: `Drinks & shakes`,
+    visit_h2: `When to visit`,
+    visit_sub: `Open every day, the kitchen closes around midnight.`,
+    visit_card1_h3: `Opening hours`,
+    visit_card1_p: `Open daily. Please check the schedule on our Facebook page before visiting — it can shift seasonally.`,
+    visit_card2_big: `Evening`,
+    visit_card2_h3: `Busiest time`,
+    visit_card2_p: `Weekend evenings tend to get busy. For a table without waiting, come in the morning or call ahead.`,
+    visit_card3_big: `Dine-in + takeaway`,
+    visit_card3_h3: `Format`,
+    visit_card3_p: `Stay in the dining room or on the veranda, or take your order to go — the packaging travels well.`,
+    reviews_h2: `What guests say`,
+    reviews_sub: `A few lines from real map reviews, retold in our own words.`,
+    review1_text: `"I had the arugula salad with a light glass of champagne, and lemon cheesecake for dessert. Everything was fresh and tasted homemade."`,
+    review1_who_prefix: `—`,
+    review1_when: `2 months ago`,
+    review2_text: `"A place you want to come back to. The food is fragrant, the plating is neat — you can tell every detail was thought through."`,
+    review3_text: `"Our favourite café in the city for years now — we stop by for lunch or dinner every time we're in Batumi."`,
+    review3_who: `guest`,
+    review_local_guide: `Local Guide`,
+    rating_line: `4.2 out of 5 · 1,336 map reviews`,
+    contacts_h2: `How to find us`,
+    loc_pluscode: `Plus Code: JJXM+XW Batumi`,
+    loc_phone_sub: `Calls & table bookings`,
+    loc_fb: `Café on Facebook`,
+    loc_fb_sub: `Menu, news, photos`,
+    loc_glovo: `Glovo — delivery`,
+    loc_glovo_sub: `Order online for home delivery`,
+    footer_brand: `Privet iz Batuma`
+  }
+};
+
+/* ================= menu data (sourced from the Glovo store page) ================= */
+const MENU = [
+  {id:'club-sandwich', cat:'sandwiches', hit:true, price:'23,10 ₾',
+    img:'https://glovo.dhmedia.io/image/global-menu-service/GV_GE/vendor/887899/PRODUCT/99a6a5c8-c42f-48f1-bbde-0a511641a61a.jpg',
+    name:{ka:`ქლაბსენდვიჩი`, ru:`Клаб-сэндвич`, en:`Club sandwich`},
+    desc:{ka:`ტოსტის პური, ქათმის ფილე, ლორი, სალათი, პომიდორი, კიტრი, კარტოფილი ფრი`, ru:`Тост, куриное филе, бекон, салат, помидор, огурец, картофель фри`, en:`Toast, chicken fillet, bacon, lettuce, tomato, cucumber, fries`}},
+  {id:'roma-classic', cat:'pizza', hit:true, price:'25,85 ₾',
+    img:'https://glovo.dhmedia.io/image/menus-glovo/products/4d4e2c42978dc4228c00c9634430082ebf9e49b22dcb9e2fea285c7b4ac8bf66',
+    name:{ka:`პიცა „რომა კლასიკი“`, ru:`Пицца «Рома Классик»`, en:`Pizza Roma Classic`},
+    desc:{ka:`თხელი ცომი, ტომატის სოუსი, მოცარელა და ორეგანო`, ru:`Тонкое тесто, томатный соус, моцарелла и орегано`, en:`Thin crust, tomato sauce, mozzarella and oregano`}},
+  {id:'vienna-schnitzel', cat:'hot', hit:true, price:'24,20 ₾',
+    img:'https://glovo.dhmedia.io/image/menus-glovo/products/bd1f658ab7dc07a7a148bca5e07ac71f4535c547e6cf15966cd20a6f3dff4abe',
+    name:{ka:`ვენური შნიცელი`, ru:`Венский шницель`, en:`Vienna schnitzel`},
+    desc:{ka:`ქათმის ფილე პანირში, გამომცხვარი კარტოფილი`, ru:`Куриное филе в панировке, запечённый картофель`, en:`Breaded chicken fillet, baked potato`}},
+  {id:'grilled-salmon', cat:'hot', isNew:true, price:'42,90 ₾',
+    img:'https://glovo.dhmedia.io/image/global-menu-service/GV_GE/vendor/887899/product/41954618276/515ec88e-8851-4d4a-a03d-3340dd753215.jpg',
+    name:{ka:`ორაგული გრილზე ბოსტნეულით`, ru:`Лосось на гриле с овощами`, en:`Grilled salmon with vegetables`},
+    desc:{ka:`გრილზე შემწვარი ორაგული ბოსტნეულის გარნირით`, ru:`Лосось на гриле с овощным гарниром`, en:`Grilled salmon served with seasonal vegetables`}},
+  {id:'beef-medallions', cat:'hot', price:'39,60 ₾',
+    img:'https://glovo.dhmedia.io/image/global-menu-service/GV_GE/vendor/887899/product/41954618246/32a9a1df-d8c9-4c8b-bb5a-e94acd615885.jpg',
+    name:{ka:`საქონლის მედალიონები წიწაკის სოუსით`, ru:`Медальоны из говядины с перечным соусом`, en:`Beef medallions with pepper sauce`},
+    desc:{ka:`საქონლის ხორცი, გარნირი, წიწაკის სოუსი`, ru:`Говядина, гарнир, соус из перца`, en:`Beef, side garnish, pepper sauce`}},
+  {id:'tiger-shrimp', cat:'hot', isNew:true, price:'38,50 ₾',
+    img:'https://glovo.dhmedia.io/image/menus-glovo/products/27962ec17a00cb1ecba53153c5ce7a1e2cb2a77f3cdfe321f55e723386fdf087',
+    name:{ka:`ვეფხისებური კრევეტი გარნირით`, ru:`Тигровая креветка с гарниром`, en:`Tiger shrimp with garnish`},
+    desc:{ka:`კრევეტი, ბრინჯი, სიმინდი, მწვანე და წითელი წიწაკა`, ru:`Креветки, рис, кукуруза, зелёный и красный перец`, en:`Shrimp, rice, corn, green and red bell pepper`}},
+  {id:'beef-stroganoff', cat:'hot', price:'30,80 ₾',
+    img:'https://glovo.dhmedia.io/image/menus-glovo/products/22ecb47cbbb335b7d1f320cc219b1c32c6accd7d5bd162a9ccacd730b5a41acc',
+    name:{ka:`ბიფსტროგანოვი`, ru:`Бефстроганов`, en:`Beef Stroganoff`},
+    desc:{ka:`საქონლის ხორცი, არაჟნის სოუსი, შემწვარი კარტოფილი`, ru:`Говядина, сметанный соус, жареный картофель`, en:`Beef, sour cream sauce, fried potatoes`}},
+  {id:'sulguni-lavash', cat:'hot', price:'19,80 ₾',
+    img:'https://glovo.dhmedia.io/image/menus-glovo/products/3b2cc4a4175d89b58c3ea67a17ac26f925dadfc6fed0b23f7100d5def8ba2456',
+    name:{ka:`სულგუნი ლავაშში`, ru:`Сулугуни в лаваше`, en:`Sulguni cheese in lavash`},
+    desc:{ka:`ლავაში, ყველი სულგუნი, კარაქი`, ru:`Лаваш, сыр сулугуни, сливочное масло`, en:`Lavash bread, sulguni cheese, butter`}},
+  {id:'caesar-shrimp', cat:'salads', price:'37,40 ₾',
+    img:'https://glovo.dhmedia.io/image/menus-glovo/products/fa168d9b3c0c52a7a6386509280cbf517d491c77cc0e963d4034c24a18ad6f96',
+    name:{ka:`ცეზარი კრევეტით`, ru:`Цезарь с креветками`, en:`Caesar with shrimp`},
+    desc:{ka:`სალათის ფოთოლი, კრევეტი, დრესინგი`, ru:`Листья салата, креветки, соус`, en:`Lettuce, shrimp, dressing`}},
+  {id:'classic-caesar', cat:'salads', price:'23,10 ₾',
+    img:'https://glovo.dhmedia.io/image/menus-glovo/products/c8a485d7eaf1169d15a80474e67649e7ffa7a88f2e50f2653fdb201e21bef1b6',
+    name:{ka:`კლასიკური ცეზარი პარმეზანით`, ru:`Классический «Цезарь» с пармезаном`, en:`Classic Caesar with parmesan`},
+    desc:{ka:`სალათი, ქათმის ფილე, პარმეზანი, პომიდორი, დრესინგი`, ru:`Салат, куриное филе, пармезан, помидор, соус`, en:`Lettuce, chicken fillet, parmesan, tomato, dressing`}},
+  {id:'arugula-avocado', cat:'salads', isNew:true, price:'19,80 ₾',
+    img:'https://glovo.dhmedia.io/image/menus-glovo/products/39bda0ecd4d2e921412ce5c672683cc771a2a0f03d9eb4a5c1c6ee366335fb85',
+    name:{ka:`რუკოლას და ავოკადოს სალათი`, ru:`Салат с руколой и авокадо`, en:`Arugula and avocado salad`},
+    desc:{ka:`რუკოლა, ავოკადო, ყველი, ნიგოზი, ხილი`, ru:`Руккола, авокадо, сыр, грецкий орех, фрукты`, en:`Arugula, avocado, cheese, walnuts, fruit`}},
+  {id:'greek-salad', cat:'salads', price:'18,70 ₾',
+    img:'https://glovo.dhmedia.io/image/menus-glovo/products/7bf291859811a4a2dfae7056a9f8ba30a6492a8ee2d36c63db64699f966721e6',
+    name:{ka:`ბერძნული სალათი`, ru:`Греческий салат`, en:`Greek salad`},
+    desc:{ka:`კიტრი, პომიდორი, სალათი, ყველი ფეტა`, ru:`Огурец, помидор, листья салата, сыр фета`, en:`Cucumber, tomato, lettuce, feta cheese`}},
+  {id:'pizza-quattro', cat:'pizza', price:'32,45 ₾',
+    img:'https://glovo.dhmedia.io/image/menus-glovo/products/7dd2ee9251c23a31b18342bd7ffd8a862df1d1e24505b95aac11eacdde59fa31',
+    name:{ka:`პიცა „კვატრო ფორმაჯი“`, ru:`Пицца «Кватро Формаджи»`, en:`Pizza Quattro Formaggi`},
+    desc:{ka:`ოთხი სახეობის ყველი: მოცარელა, გორგონზოლა, ემენტალი და პარმეზანი`, ru:`Четыре вида сыра: моцарелла, горгонзола, эмменталь и пармезан`, en:`Four cheeses: mozzarella, gorgonzola, emmental and parmesan`}},
+  {id:'megruli-khachapuri', cat:'pizza', price:'29,15 ₾',
+    img:'https://glovo.dhmedia.io/image/global-menu-service/GV_GE/vendor/887899/PRODUCT/d40d84f0-ea2f-4628-b07b-61f91da14553.jpg',
+    name:{ka:`მეგრული ხაჭაპური`, ru:`Мегрельское хачапури`, en:`Megruli khachapuri`},
+    desc:{ka:`8 ნაჭრად დაჭრილი`, ru:`Нарезано на 8 кусочков`, en:`Cut into 8 slices`}},
+  {id:'pizza-carbonara', cat:'pizza', price:'28,05 ₾',
+    img:'https://glovo.dhmedia.io/image/global-menu-service/GV_GE/vendor/887899/PRODUCT/c3d29b23-9264-479e-b7c1-1cb2ea8f4538.jpg',
+    name:{ka:`პიცა „კარბონარა“`, ru:`Пицца «Карбонара»`, en:`Pizza Carbonara`},
+    desc:{ka:`ცომი, მოცარელა და პარმეზანი, ბეკონი, ნაღები, კვერცხი`, ru:`Тесто, моцарелла и пармезан, бекон, сливки, яйцо`, en:`Dough, mozzarella and parmesan, bacon, cream, egg`}},
+  {id:'imeruli-khachapuri', cat:'pizza', price:'26,95 ₾',
+    img:'https://glovo.dhmedia.io/image/global-menu-service/GV_GE/vendor/887899/PRODUCT/8b42df10-fcd3-4e8d-87b8-a3505e3faef7.jpg',
+    name:{ka:`იმერული ხაჭაპური`, ru:`Имеретинское хачапури`, en:`Imeruli khachapuri`},
+    desc:{ka:`8 ნაჭრად დაჭრილი`, ru:`Нарезано на 8 кусочков`, en:`Cut into 8 slices`}},
+  {id:'tagliatelle-seafood', cat:'pasta', price:'28,60 ₾',
+    img:'https://glovo.dhmedia.io/image/menus-glovo/products/238f1712dc7c081068dfc64409f4ba445df6485991b488559458424edaa1e70c',
+    name:{ka:`ტალიატელე ზღვის პროდუქტებით`, ru:`Тальятелле с морепродуктами`, en:`Tagliatelle with seafood`},
+    desc:{ka:`პასტა, ზღვის პროდუქტების კოქტეილი`, ru:`Паста, коктейль из морепродуктов`, en:`Pasta, seafood cocktail`}},
+  {id:'carbonara-pasta', cat:'pasta', price:'23,10 ₾',
+    img:'https://glovo.dhmedia.io/image/menus-glovo/products/2de1ccc54bb14fea7885f49a890884e19cb61167c3fd3258e405f5dc8a0d4c77',
+    name:{ka:`კარბონარა`, ru:`Карбонара`, en:`Carbonara`},
+    desc:{ka:`პასტა, ლორი, პარმეზანი, კვერცხის გული, ნაღები`, ru:`Паста, бекон, пармезан, желток, сливки`, en:`Pasta, bacon, parmesan, egg yolk, cream`}},
+  {id:'fettuccine-mushroom', cat:'pasta', price:'19,80 ₾',
+    img:'https://glovo.dhmedia.io/image/menus-glovo/products/47ff68c3cbd52a6dabe70a12e90884274fbed5b70eac5393f15f38f4edcc76c1',
+    name:{ka:`ფეტუჩინი სოკოთი და ლორით`, ru:`Феттучине с грибами и беконом`, en:`Fettuccine with mushrooms and bacon`},
+    desc:{ka:`პასტა, ქამა სოკო, ლორი, ნაღები`, ru:`Паста, грибы, бекон, сливки`, en:`Pasta, mushrooms, bacon, cream`}},
+  {id:'tagliatelle-veg', cat:'pasta', price:'14,30 ₾',
+    img:'https://glovo.dhmedia.io/image/menus-glovo/products/2f3c9507e1f5f3fa95129bcda9e33627fcd67383388296d026d87d15a5c88d9d',
+    name:{ka:`ტალიატელე ბოსტნეულით`, ru:`Тальятелле с овощами`, en:`Tagliatelle with vegetables`},
+    desc:{ka:`პასტა, ბოსტნეული`, ru:`Паста, овощи`, en:`Pasta, vegetables`}},
+  {id:'mash-4cheese', cat:'sides', price:'17,60 ₾',
+    img:'https://glovo.dhmedia.io/image/menus-glovo/products/9fca5ec8551799d7557d62a2af568170f3888ca6467daaa74714f36196415c95',
+    name:{ka:`კარტოფილის პიურე 4 ყველით`, ru:`Картофельное пюре с 4 сырами`, en:`Mashed potato with 4 cheeses`},
+    desc:{ka:`კარტოფილი, ლურჯი ყველი, პარმეზანი, გაუდა, მოცარელა`, ru:`Картофель, сыр с голубой плесенью, пармезан, гауда, моцарелла`, en:`Potato, blue cheese, parmesan, gouda, mozzarella`}},
+  {id:'rice-veg', cat:'sides', price:'8,80 ₾',
+    img:'https://glovo.dhmedia.io/image/global-menu-service/GV_GE/vendor/887899/PRODUCT/a53c88a6-2a5a-436a-a9e6-f2f2ad120a0a.jpg',
+    name:{ka:`ბრინჯი ბოსტნეულით`, ru:`Рис с овощами`, en:`Rice with vegetables`},
+    desc:{ka:`მოხარშული ბრინჯი და ბოსტნეული`, ru:`Отварной рис с овощами`, en:`Boiled rice with vegetables`}},
+  {id:'fries', cat:'sides', price:'7,70 ₾',
+    img:'https://glovo.dhmedia.io/image/global-menu-service/GV_GE/vendor/887899/PRODUCT/5c845746-64a2-4a27-b3f0-eac64ff35260.jpg',
+    name:{ka:`კარტოფილი ფრი`, ru:`Картофель фри`, en:`French fries`},
+    desc:{ka:`კარტოფილი, კეტჩუპი`, ru:`Картофель, кетчуп`, en:`Fries with ketchup`}},
+  {id:'guacamole-sandwich', cat:'sandwiches', price:'20,90 ₾',
+    img:'https://glovo.dhmedia.io/image/global-menu-service/GV_GE/vendor/887899/PRODUCT/132ff2af-e6da-4e2e-9028-e8c7906a6a0a.jpg',
+    name:{ka:`გუაკამოლე სენდვიჩი`, ru:`Сэндвич с гуакамоле`, en:`Guacamole sandwich`},
+    desc:{ka:`პური, ავოკადო, სანელებლები, კვერცხი, პომიდორი, კიტრი`, ru:`Хлеб, авокадо, специи, яйцо, помидор, огурец`, en:`Bread, avocado, spices, egg, tomato, cucumber`}},
+  {id:'french-toast', cat:'sandwiches', price:'14,30 ₾',
+    img:'https://glovo.dhmedia.io/image/global-menu-service/GV_GE/vendor/887899/PRODUCT/65e3fc2e-6da7-4f99-b8d1-5c195bc0da8c.jpg',
+    name:{ka:`ფრანგული ტოსტი ლორითა და ყველით`, ru:`Французский тост с беконом и сыром`, en:`French toast with bacon and cheese`},
+    desc:{ka:`ტოსტი, დიჟონის მდოგვი, კარაქი, კვერცხი, ყველი და ლორი`, ru:`Тост, дижонская горчица, масло, яйцо, сыр и бекон`, en:`Toast, Dijon mustard, butter, egg, cheese and bacon`}},
+  {id:'tomato-soup', cat:'soups', price:'13,20 ₾',
+    img:'https://glovo.dhmedia.io/image/global-menu-service/GV_GE/vendor/887899/PRODUCT/012faebf-a5ce-4dd3-ae8a-f960a0ea2a5f.jpg',
+    name:{ka:`ტომატის კრემსუპი`, ru:`Томатный крем-суп`, en:`Tomato cream soup`},
+    desc:{ka:`ბოსტნეული, პომიდორი, სანელებელი, ნაღები`, ru:`Овощи, помидоры, специи, сливки`, en:`Vegetables, tomatoes, spices, cream`}},
+  {id:'okroshka', cat:'soups', price:'12,10 ₾',
+    img:'https://glovo.dhmedia.io/image/global-menu-service/GV_GE/vendor/887899/PRODUCT/79f3faab-10d5-424b-88d1-bf295602a327.jpg',
+    name:{ka:`ცივი წვნიანი ოკროშკა`, ru:`Холодная окрошка`, en:`Cold okroshka soup`},
+    desc:{ka:`ბოსტნეული, ლორი, კვერცხი, მაწონი, მწვანილი`, ru:`Овощи, бекон, яйцо, мацони, зелень`, en:`Vegetables, bacon, egg, matsoni yoghurt, herbs`}},
+  {id:'sacher-cake', cat:'desserts', price:'7,70 ₾',
+    img:'https://glovo.dhmedia.io/image/global-menu-service/GV_GE/vendor/887899/PRODUCT/597528f1-aad6-47a1-9437-9d70a5e1a257.jpg',
+    name:{ka:`ავსტრიული ტორტი „ზახერი“`, ru:`Австрийский торт «Захер»`, en:`Austrian Sacher cake`},
+    desc:{ka:`ნუში, კონიაკი, შოკოლადი`, ru:`Миндаль, коньяк, шоколад`, en:`Almond, cognac, chocolate`}},
+  {id:'tiramisu', cat:'desserts', price:'7,70 ₾',
+    img:'https://glovo.dhmedia.io/image/global-menu-service/GV_GE/vendor/887899/PRODUCT/61dd9fcf-f263-4514-b469-b69a8e30233e.jpg',
+    name:{ka:`ტირამისუ`, ru:`Тирамису`, en:`Tiramisu`},
+    desc:{ka:`ბისკვიტი, ყავა, კრემ ყველი`, ru:`Бисквит, кофе, крем-сыр`, en:`Sponge biscuit, coffee, cream cheese`}},
+  {id:'pancho', cat:'desserts', price:'7,70 ₾',
+    img:'https://glovo.dhmedia.io/image/global-menu-service/GV_GE/vendor/887899/PRODUCT/9f3d7aa4-e34c-4b1d-9dfa-96cd625ea3ad.jpg',
+    name:{ka:`დესერტი „პანჩო“`, ru:`Десерт «Панчо»`, en:`Pancho dessert`},
+    desc:{ka:`ტროპიკული ხილის დესერტი`, ru:`Десерт из тропических фруктов`, en:`Tropical fruit dessert`}},
+  {id:'choc-mousse', cat:'desserts', price:'6,05 ₾',
+    img:'https://glovo.dhmedia.io/image/global-menu-service/GV_GE/vendor/887899/PRODUCT/dabef398-b819-41eb-a40d-461c4efccaf4.jpg',
+    name:{ka:`შოკმანჟე`, ru:`Шоколадный мусс`, en:`Chocolate mousse`},
+    desc:{ka:`ნაზი შოკოლადის მუსი`, ru:`Нежный шоколадный мусс`, en:`Silky chocolate mousse`}},
+  {id:'raspberry-lemonade', cat:'drinks', price:'14,30 ₾',
+    img:'https://glovo.dhmedia.io/image/global-menu-service/GV_GE/vendor/887899/PRODUCT/c4b00a8e-c999-4873-bff0-0c4340b2383b.jpg',
+    name:{ka:`ჟოლოს ლიმონათი`, ru:`Малиновый лимонад`, en:`Raspberry lemonade`},
+    desc:{ka:`კენკრა, ტონიკი, ჯინჯერ ეილი`, ru:`Ягоды, тоник, джинджер эль`, en:`Berries, tonic, ginger ale`}},
+  {id:'vanilla-shake', cat:'drinks', price:'13,20 ₾',
+    img:'https://glovo.dhmedia.io/image/global-menu-service/GV_GE/vendor/887899/PRODUCT/108aa4b2-d3ee-4f47-a8c8-85a652989eb6.jpg',
+    name:{ka:`ვანილის შეიკი`, ru:`Ванильный шейк`, en:`Vanilla milkshake`},
+    desc:{ka:`რძე, ვანილის ნაყინი`, ru:`Молоко, ванильное мороженое`, en:`Milk, vanilla ice cream`}},
+  {id:'strawberry-shake', cat:'drinks', price:'13,20 ₾',
+    img:'https://glovo.dhmedia.io/image/global-menu-service/GV_GE/vendor/887899/PRODUCT/acca27ee-fb08-438c-89e7-1658c4566eac.jpg',
+    name:{ka:`მარწყვის შეიკი`, ru:`Клубничный шейк`, en:`Strawberry milkshake`},
+    desc:{ka:`რძე, მარწყვის ნაყინი`, ru:`Молоко, клубничное мороженое`, en:`Milk, strawberry ice cream`}},
+  {id:'mineral-water', cat:'drinks', price:'4,40 ₾',
+    img:'https://glovo.dhmedia.io/image/global-menu-service/GV_GE/vendor/887899/PRODUCT/41954618272/5b81b595-1676-425d-b1bf-0ee53be9b8d8.jpg',
+    name:{ka:`მინერალური წყალი 0.5ლ`, ru:`Минеральная вода 0.5 л`, en:`Mineral water 0.5L`},
+    desc:{ka:`გამაგრილებელი სასმელი`, ru:`Освежающий напиток`, en:`Refreshing drink`}}
+];
+
+const CATEGORIES = ['all','hot','salads','pizza','pasta','sides','sandwiches','soups','desserts','drinks'];
+const CAT_KEY = {all:'cat_all', hot:'cat_hot', salads:'cat_salads', pizza:'cat_pizza', pasta:'cat_pasta', sides:'cat_sides', sandwiches:'cat_sandwiches', soups:'cat_soups', desserts:'cat_desserts', drinks:'cat_drinks'};
+
+let currentLang = 'ka';
+let currentCat = 'all';
+
+function t(key){ return (I18N[currentLang] && I18N[currentLang][key]) || key; }
+
+function renderTabs(){
+  const el = document.getElementById('menu-tabs');
+  el.innerHTML = '';
+  CATEGORIES.forEach(cat=>{
+    const btn = document.createElement('button');
+    btn.type = 'button';
+    btn.textContent = t(CAT_KEY[cat]);
+    if(cat === currentCat) btn.classList.add('active');
+    btn.addEventListener('click', ()=>{ currentCat = cat; renderTabs(); renderMenu(); });
+    el.appendChild(btn);
+  });
+}
+
+function dishCard(item){
+  const card = document.createElement('article');
+  card.className = 'dish';
+  let tagHtml = '';
+  if(item.hit) tagHtml = `<span class="tag">${t('badge_hit')}</span>`;
+  else if(item.isNew) tagHtml = `<span class="tag new">${t('badge_new')}</span>`;
+  const orderUrl = glovoUrl(item);
+  card.innerHTML = `
+    ${tagHtml}
+    <a class="dish-link" href="${orderUrl}" target="_blank" rel="noopener" aria-label="${item.name[currentLang]} — Glovo">
+      <img class="dish-img" src="${item.img}" alt="${item.name[currentLang]}" loading="lazy">
+      <h3>${item.name[currentLang]}</h3>
+      <p>${item.desc[currentLang]}</p>
+      <span class="price">${item.price.replace('₾', 'GEL')}</span>
+    </a>
+  `;
+  return card;
+}
+
+function renderMenu(){
+  const grid = document.getElementById('menu-grid');
+  grid.innerHTML = '';
+  const items = currentCat === 'all' ? MENU : MENU.filter(m=>m.cat === currentCat);
+  items.forEach(item=> grid.appendChild(dishCard(item)));
+}
+
+function glovoUrl(item){
+  return `https://glovoapp.com/ka/ge/batumi/stores/privet-iz-batuma-bat?search=${encodeURIComponent(item.name.ka)}`;
+}
+
+function showcaseCard(item){
+  const card = document.createElement('a');
+  card.className = 'showcase-card dish-link';
+  card.href = glovoUrl(item);
+  card.target = '_blank';
+  card.rel = 'noopener';
+  card.setAttribute('aria-label', `${item.name[currentLang]} — Glovo`);
+  card.innerHTML = `
+    <img src="${item.img}" alt="${item.name[currentLang]}" loading="lazy">
+    <div class="info">
+      <h4>${item.name[currentLang]}</h4>
+      <p>${item.desc[currentLang]}</p>
+      <span class="price">${item.price.replace('₾', 'GEL')}</span>
+    </div>
+  `;
+  return card;
+}
+
+function renderShowcase(){
+  const hitsEl = document.getElementById('showcase-hits');
+  const newEl = document.getElementById('showcase-new');
+  hitsEl.innerHTML = '';
+  newEl.innerHTML = '';
+  MENU.filter(m=>m.hit).forEach(item=> hitsEl.appendChild(showcaseCard(item)));
+  MENU.filter(m=>m.isNew).forEach(item=> newEl.appendChild(showcaseCard(item)));
+}
+
+function updateLangButtons(){
+  document.querySelectorAll('.lang-switch button').forEach(btn=>{
+    btn.classList.toggle('active', btn.getAttribute('data-lang') === currentLang);
+  });
+}
+
+function applyI18N(){
+  document.querySelectorAll('[data-i18n]').forEach(el=>{
+    const key = el.getAttribute('data-i18n');
+    el.innerHTML = t(key);
+  });
+  document.documentElement.lang = currentLang;
+  document.title = t('page_title');
+  const metaDesc = document.querySelector('meta[name="description"]');
+  if(metaDesc) metaDesc.setAttribute('content', t('page_description'));
+  renderTabs();
+  renderMenu();
+  renderShowcase();
+  updateLangButtons();
+}
+
+function setLanguage(lang){
+  if(!I18N[lang]) return;
+  currentLang = lang;
+  applyI18N();
+}
+
+document.querySelectorAll('.lang-switch button').forEach(btn=>{
+  btn.addEventListener('click', ()=> setLanguage(btn.getAttribute('data-lang')));
+});
+
+applyI18N();
+</script>
+
+</body>
+</html>
